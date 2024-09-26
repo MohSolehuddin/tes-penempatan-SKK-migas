@@ -42,15 +42,16 @@ insert into transaksi values
 ('TRX007', '2019-10-18', 'P3', 'B1', '4'),
 ('TRX008', '2019-10-18', 'P2', 'B2', '2');
 
-
+-- Jawaban no 4 a
 select * from barang where harga > 10000 order by harga asc;
 
+-- Jawaban no 4 b
 select * from pelanggan where nama ilike '%g%' and alamat = 'BANDUNG';
 
-
---(select * from transaksi t left join barang b on t.kode_barang = b.kode group by ))
-
-select t.kode, t.tanggal, p.nama, b.nama, t.jumlah_barang, b.harga
+-- Jawaban no 4 c
+select t.kode, t.tanggal, p.nama as nama_pelanggan, b.nama as nama_barang, t.jumlah_barang, b.harga, (t.jumlah_barang * b.harga) as total
 from transaksi t left join barang b on t.kode_barang = b.kode left join pelanggan p on t.kode_pelanggan = p.kode order by p.nama asc, t.tanggal ;
-select * from barang b ;
-select * from transaksi t ;
+
+-- Jawaban no 4 d
+select p.nama as nama_pelanggan, sum(t.jumlah_barang) as jumlah , sum(t.jumlah_barang * b.harga) as total
+from transaksi t left join barang b on t.kode_barang = b.kode left join pelanggan p on t.kode_pelanggan = p.kode group by p.nama order by sum(t.jumlah_barang) desc ;
