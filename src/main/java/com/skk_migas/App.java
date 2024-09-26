@@ -11,9 +11,14 @@ public class App {
         SKKMigas.OkYes(15);
 
         System.out.println("Jawaban No 2");
+        System.out.println("2. a");
         SKKMigas.no2a(5);
+        System.out.println("2. d");
         SKKMigas.no2b(5);
+        System.out.println("2. c");
         SKKMigas.no2c(5);
+        System.out.println("2. d");
+//        SKKMigas.no3();
 
         System.out.println("Jawaban No 3");
         List<Integer> integerList = Arrays.asList(12, 9, 13, 6, 10, 4, 7, 2);
