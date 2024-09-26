@@ -54,4 +54,25 @@ public class SKKMigas {
             System.out.println();
         }
     }
+
+    public static void no3(List<Integer> list){
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) % 3 != 0){
+                result.add(list.get(i));
+            }
+        }
+
+        for (int i = 0; i < result.size(); i++) {
+            for (int j = i; j < result.size(); j++) {
+                if (result.get(i) > result.get(j)){
+                    Integer temp = result.get(i);
+                    result.set(i, result.get(j));
+                    result.set(j, temp);
+                }
+            }
+        }
+
+        System.out.println(result.toString());
+    }
 }
