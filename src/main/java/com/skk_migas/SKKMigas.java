@@ -58,6 +58,27 @@ public class SKKMigas {
         }
     }
 
+    public static void no2d(Integer n){
+        Integer total = n * n;
+
+        List<Integer> listAngkaGanjil = new ArrayList<>();
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 1){
+                listAngkaGanjil.add(i);
+            }
+        }
+        for (int i = 1; i <= n ; i++) {
+            for (int j = 1; j <= n ; j++) {
+                if (j % 2 == 0){
+                    Integer result = i;
+                    System.out.println();
+                }else {
+
+                }
+            }
+        }
+    }
+
     public static void no3(List<Integer> list){
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
