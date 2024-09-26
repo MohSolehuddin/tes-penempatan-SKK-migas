@@ -37,17 +37,8 @@ public class SKKMigas {
 
     public static void no2c(Integer n){
         Integer nilai = 1;
+        boolean isIncrement = true;
         for (int i = 1; i <= n ; i++) {
-            boolean isIncrement = true;
-//            for (int j = 1; j <= i  ; j++) {
-//                System.out.print(nilai);
-//                if (nilai.equals(n)){
-//                    nilai++;
-//                }
-//                if (nilai == 1){
-//                    isIncrement = true;
-//                }
-//            }
             for (int j = 1; j <= i  ; j++) {
                 if (nilai.equals(n) && isIncrement){
                     isIncrement = false;
@@ -58,54 +49,12 @@ public class SKKMigas {
                 if (isIncrement){
                     System.out.print(nilai);
                     nilai++;
-//                if (nilai.equals(n)){
-//                    isIncrement = false;
-//                }else {
-//                    nilai++;
                 }else {
                     System.out.print(nilai);
                     nilai--;
                 }
             }
             System.out.println();
-//
-//            if (isIncrement){
-//                for (int j = 1; j <= i  ; j++) {
-//                    System.out.print(nilai);
-//                    if (nilai.equals(n)){
-//                        isIncrement = false;
-//                    }else {
-//                        nilai++;
-//                    }
-//                }
-//                System.out.println();
-//            }else {
-//                for (int j = 1; j <= i ; j++) {
-//                    System.out.print(nilai);
-//                    if (nilai == 1){
-//                        isIncrement = true;
-//                    }else {
-//                        nilai--;
-//                    }
-//                }
-//                System.out.println();
-//            }
-
-//            List<Integer> numbers = new ArrayList<>();
-//            Integer temp = i;
-//            for (int j = 1; j <= i; j++) {
-//                if (numbers.isEmpty()){
-//                    numbers.add(temp);
-//                } else if (numbers.size() > 5) {
-//                    numbers.add(temp);
-//                    temp++;
-//                } else {
-//                    numbers.add(temp);
-//                    temp--;
-//                }
-//                System.out.print(temp);
-//            }
-//            System.out.println();
         }
     }
 
