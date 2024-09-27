@@ -71,15 +71,21 @@ public class SKKMigas {
             currentNumber++;
             if (listAngkaGanjil.size() == 5) break;
         }
-        System.out.println(listAngkaGanjil.toString());
+
         for (int i = 0; i < n ; i++) {
             Integer currentValue = i;
             for (int j = 1; j <= n ; j++) {
                 if (j % 2 == 0){
-                    currentValue += listAngkaGanjil.get(n - i - 1) + 1;
+                    currentValue += listAngkaGanjil.get(n - i - 1);
                     System.out.print(currentValue + "\t");
                 }else {
-                    System.out.print(currentValue + 1 + "\t");
+                    if (j == 1){
+                        currentValue += 1;
+                        System.out.print(currentValue + "\t");
+                    }else {
+                        currentValue += listAngkaGanjil.get(i);
+                        System.out.print(currentValue + "\t");
+                    }
                 }
             }
             System.out.println();
