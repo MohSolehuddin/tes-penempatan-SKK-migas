@@ -1,5 +1,6 @@
 package com.skk_migas;
 
+import java.nio.channels.IllegalBlockingModeException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,20 +63,26 @@ public class SKKMigas {
         Integer total = n * n;
 
         List<Integer> listAngkaGanjil = new ArrayList<>();
-        for (int i = 1; i <= n; i++) {
-            if (i % 2 == 1){
-                listAngkaGanjil.add(i);
+        Integer currentNumber = 1;
+        while (true){
+            if (currentNumber % 2 == 1){
+                listAngkaGanjil.add(currentNumber);
             }
+            currentNumber++;
+            if (listAngkaGanjil.size() == 5) break;
         }
-        for (int i = 1; i <= n ; i++) {
+        System.out.println(listAngkaGanjil.toString());
+        for (int i = 0; i < n ; i++) {
+            Integer currentValue = i;
             for (int j = 1; j <= n ; j++) {
                 if (j % 2 == 0){
-                    Integer result = i;
-                    System.out.println();
+                    currentValue += listAngkaGanjil.get(n - i - 1) + 1;
+                    System.out.print(currentValue + "\t");
                 }else {
-
+                    System.out.print(currentValue + 1 + "\t");
                 }
             }
+            System.out.println();
         }
     }
 
